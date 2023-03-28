@@ -3,14 +3,23 @@
 
 #include <stdarg.h>
 
-/* a creer dans le fichier 0x01-put.c*/
+/* To be created in 0x01-put.c file */
 int _putc(char c);
 int _puts(char *str);
 
-/* a creer dans le fichier 0x01-puti.c pour lire ecrire des entiers*/
+/*
+ * To be created in 0x01-puti.c.
+ * File pour lire ecrire des entiers
+*/
 int _puti(int number);
 
-/* a creer dans le fichier 0x01-printf.c*/
+/* To be created in 0x01-printf.c file*/
 int _printf(char *format, ...);
+
+/*
+ * Function to be created in 0x01-putb.c file.
+ * To convert and int number to binary
+*/
+int _putb(int num);
 
 #endif
