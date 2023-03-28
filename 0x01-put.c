@@ -28,5 +28,5 @@ int _puts(char *str)
 		n += _putc(str[i]);
 		i++;
 	}
-	return (0);
+	return (n);
 }
