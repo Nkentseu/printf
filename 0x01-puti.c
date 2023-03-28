@@ -8,7 +8,7 @@
  */
 int _puti(int number)
 {
-	if (numbre < 0)
+	if (number < 0)
 	{
 		int n = _putc('-');
 
