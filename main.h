@@ -8,6 +8,6 @@ int _putc(char c);
 int _puts(char *str);
 
 /* a creer dans le fichier 0x01-printf.c*/
-int _printf(char *format, ...)
+int _printf(char *format, ...);
 
 #endif
