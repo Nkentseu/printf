@@ -10,7 +10,7 @@ int _printf(char *format, ...)
 	va_list ap;
 	int i = 0;
 	int number = 0;
-	
+
 	if (format == 0)
 		return (0);
 	va_start(ap, format);
