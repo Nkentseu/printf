@@ -9,7 +9,7 @@ int _putc(char c)
 {
 	int n = (write(1, &c, 1));
 
-	return ((n <= 0) ? 0 : 1);
+	return ((n < 0) ? -1 : n);
 }
 /**
  *_puts - Function that print string
@@ -25,7 +25,11 @@ int _puts(char *str)
 		return (0);
 	while (str[i] != '\0')
 	{
-		n += _putc(str[i]);
+		int p = _putc(str[i]);
+
+		if (n < 0)
+			return (n);
+		n += p;
 		i++;
 	}
 	return (n);
