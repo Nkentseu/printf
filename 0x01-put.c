@@ -9,7 +9,7 @@ int _putc(char c)
 {
 	int n = (write(1, &c, 1));
 
-	return ((n < 0) ? 0 : n);
+	return ((n <= 0) ? 0 : 1);
 }
 /**
  *_puts - Function that print string
@@ -28,5 +28,5 @@ int _puts(char *str)
 		n += _putc(str[i]);
 		i++;
 	}
-	return (n);
+	return (0);
 }
