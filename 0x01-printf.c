@@ -25,6 +25,8 @@ int _printf(char *format, ...)
 				number += _putc('%');
 			else if (format[i] == 'd' || format[i] == 'i')
 				number += _puti((int)va_arg(ap, int));
+			else if (format[i] == 'b')
+				number += _putb((int)va_arg(ap, int));
 			else
 			{
 				number += _putc('%');
