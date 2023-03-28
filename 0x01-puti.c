@@ -14,11 +14,11 @@ int _puti(int number)
 
 		if (n == INT_MIN)
 		{
-			n += _puti(-(n / 10));
-			n += _putc('0' + (-(n % 10)));
+			n += _puti(-(number / 10));
+			n += _putc('0' + (-(number % 10)));
 		}
 		else
-			n += _puti(-n);
+			n += _puti(-number);
 		return (n);
 	}
 	else
@@ -26,9 +26,9 @@ int _puti(int number)
 		int n = 0;
 
 		if (number <= 9)
-			return (_putc('0' + n));
-		n += _puti(n / 10);
-		n += _putc(n % 10);
+			return (_putc('0' + number));
+		n += _puti(number / 10);
+		n += _putc('0' + (number % 10));
 		return (n);
 	}
 }
