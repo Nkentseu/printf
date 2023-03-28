@@ -22,7 +22,7 @@ int _printf(char *format, ...)
 			if (format[i] == 's')
 				number += _puts((char *)va_arg(ap, char *));
 			else if (format[i] == 'c')
-				number += _putc((int)va_arg(ap, int));
+				number += _putc((char)va_arg(ap, int));
 			else if (format[i] == '%')
 				number += _putc('%');
 			else if (format[i] == 'd' || format[i] == 'i')
