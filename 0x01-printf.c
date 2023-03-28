@@ -10,9 +10,11 @@ int _printf(char *format, ...)
 	va_list ap;
 	int i = 0;
 	int number = 0;
-
+	
+	if (format == 0)
+		return (0);
 	va_start(ap, format);
-	while (format != 0 && format[i] != '\0')
+	while (format[i] != '\0')
 	{
 		if (format[i] == '%')
 		{
@@ -30,10 +32,9 @@ int _printf(char *format, ...)
 			else
 			{
 				number += _putc('%');
-				if (format[i] != '\0')
-					number += _putc(format[i]);
-				else
-					i--;
+				if (format[i] == '\0')
+					return (number);
+				number += _putc(format[i]);
 			}
 		}
 		else
