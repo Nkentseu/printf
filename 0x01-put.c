@@ -27,7 +27,7 @@ int _puts(char *str)
 	{
 		int p = _putc(str[i]);
 
-		if (n < 0)
+		if (p < 0)
 			return (n);
 		n += p;
 		i++;

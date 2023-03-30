@@ -12,7 +12,10 @@ int _putb(int num)
 	if (num < 0)
 		return (0);
 	if (num < 2)
-		return (_putc('0' + num));
+	{
+		n = _putc('0' + num);
+		return ((n < 0) ? 0 : n);
+	}
 	n += _putb(num / 2);
 	return (n + _putc('0' + (num % 2)));
 }

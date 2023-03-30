@@ -38,7 +38,11 @@ int _printf(char *format, ...)
 			}
 		}
 		else
+		{
+			if (format[i] == '\0')
+				return (number);
 			number += _putc(format[i]);
+		}
 		i++;
 	}
 	va_end(ap);

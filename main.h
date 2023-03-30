@@ -2,6 +2,8 @@
 #define __MAIN_H__
 
 #include <stdarg.h>
+/* To determine the leng of string. To be implemented it in 0x01-leng.c */
+int _leng(char *str);
 
 /* To be created in 0x01-put.c file */
 int _putc(char c);
