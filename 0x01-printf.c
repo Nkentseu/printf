@@ -31,18 +31,14 @@ int _printf(char *format, ...)
 				number += _putb((int)va_arg(ap, int));
 			else
 			{
-				number += _putc('%');
 				if (format[i] == '\0')
 					return (number);
+				number += _putc('%');
 				number += _putc(format[i]);
 			}
 		}
 		else
-		{
-			if (format[i] == '\0')
-				return (number);
 			number += _putc(format[i]);
-		}
 		i++;
 	}
 	va_end(ap);
